@@ -222,9 +222,10 @@ Project.objects.filter(id=1)
 Project.objects.filter(title__startswith="Website")
 Project.objects.filter(title__contains="site")
 Project.objects.filter(title__icontains="land")
-Project.objects.filter(title__gt=37)
+Project.objects.filter(vote_total__gt=37)
+Project.objects.exclude(id=1)
 
-
+quit()
 
 
 
