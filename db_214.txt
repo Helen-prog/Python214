@@ -203,6 +203,7 @@ fourth
 
 django-admin startproject devsearch
 python manage.py startapp projects
+python manage.py startapp users
 
 ForeignKey - один ко многим
 ManyToManyField - многие ко многим
