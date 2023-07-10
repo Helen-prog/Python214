@@ -1,10 +1,10 @@
 from django.shortcuts import render, redirect
-from .models import Profile, Skill
+from .models import Profile, Skill, Message
 from django.contrib.auth import logout, login, authenticate
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 from django.contrib import messages
-from .forms import CustomUserCreationForm, ProfileForm, SkillForm
+from .forms import CustomUserCreationForm, ProfileForm, SkillForm, MessageForm
 from django.contrib.auth.decorators import login_required
 from .utils import search_profiles, paginate_profiles
 
@@ -159,3 +159,38 @@ def delete_skill(request, pk):
         return redirect('account')
 
     return render(request, 'projects/delete.html', {'object': skill})
+
+
+@login_required(login_url='login')
+def inbox(request):
+    profile = request.user.profile
+    message_requests = profile.messages.all()
+    unread_count = message_requests.filter(is_read=False).count()
+    context = {
+        'message_requests': message_requests,
+        'unread_count': unread_count
+    }
+    return render(request, 'users/inbox.html', context)
+
+
+@login_required(login_url='login')
+def view_message(request, pk):
+    profile = request.user.profile
+    message = profile.messages.get(id=pk)
+
+    if message.is_read is False:
+        message.is_read = True
+        message.save()
+
+    context = {'message': message}
+    return render(request, 'users/message.html', context)
+
+
+def create_message(request, pk):
+    recipient = Profile.objects.get(id=pk)
+    form = MessageForm()
+    context = {
+        'recipient': recipient,
+        'form': form
+    }
+    return render(request, 'users/message_form.html', context)
