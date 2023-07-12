@@ -193,7 +193,7 @@ python manage.py startapp todo
 python manage.py migrate
 
 models.CASCADE - если пользователь будет удален, то удалятся все его задачи
-models.PROTECTED - запрещает удалять пользователя, пока у него есть задачи
+models.PROTECT - запрещает удалять пользователя, пока у него есть задачи
 models.SET_NULL - задачи останутся в базе, даже при удалении пользователя, но значение в поле задачи изменится на NULL
 models.SET_DEFAULT - задачи останутся в базе, даже при удалении пользователя, но значение в поле задачи изменится на значение по умолчанию
 
@@ -232,7 +232,23 @@ signals.py
 
 safe
 
+utils.py
+
+http://127.0.0.1:8000/projects/?page=3
+
+pagination.html
 
 
+http://127.0.0.1:8000/projects/?search_query=web
+http://127.0.0.1:8000/projects/?page=2
 
+http://127.0.0.1:8000/projects/
+http://127.0.0.1:8000/projects/?search_query=web
+http://127.0.0.1:8000/projects/?search_query=web&page=2
+
+message_form.html
+
+fifth
+django-admin startproject programming_blog
+python manage.py startapp blog
 		
