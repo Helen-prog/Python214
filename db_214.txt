@@ -251,4 +251,14 @@ message_form.html
 fifth
 django-admin startproject programming_blog
 python manage.py startapp blog
-		
+
+
+str - любая не пустая строку, исключая символ "/"
+int - любое целое число, включая 0
+slug - ASCII-символы, символ дефиса и символ подчеркивания
+uuid - цифры, латинские символы в нижнем регистре, дефис
+path - любая не пустая строку, включая символ "/"
+	
+templatetags
+	__init__.py	
+	blog_tags.py
