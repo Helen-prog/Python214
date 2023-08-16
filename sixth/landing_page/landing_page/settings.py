@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'cms.apps.CmsConfig',
     'price.apps.PriceConfig',
     'crm.apps.CrmConfig',
+    'telebot.apps.TelebotConfig',
 ]
 
 MIDDLEWARE = [
@@ -112,7 +113,7 @@ TIME_ZONE = 'UTC'
 
 USE_I18N = True
 
-USE_TZ = True
+USE_TZ = False
 
 
 # Static files (CSS, JavaScript, Images)

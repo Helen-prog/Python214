@@ -262,3 +262,61 @@ path - любая не пустая строку, включая символ "/
 templatetags
 	__init__.py	
 	blog_tags.py
+	
+
+git init
+git add -A
+git commit -m "blog"	
+git remote add origin https://github.com/Helen-prog/blog.git
+git push -u origin master
+
+
+git clone https://github.com/Helen-prog/blog.git
+ls - просмотр, что находится в директории
+
+mkvirtualenv --python=/usr/bin/python3.10 blogvenv
+mkvirtualenv --python=/usr/bin/python3.9 blogvenv
+
+deactivate - для выхода из виртуального окружения
+workon blogvenv - для повтороного входа
+
+pip install django
+pip install pillow
+pip install django-simple-captcha
+pip install django-ckeditor
+
+pwd 
+/home/HelenKozovyakina/.virtualenvs/blogvenv
+
+
+http://helenkozovyakina.pythonanywhere.com/
+https://helenkozovyakina.pythonanywhere.com/
+
+
+
+
+
+
+django-admin startproject landing_page
+python manage.py startapp cms
+python manage.py startapp price
+
+python manage.py startapp crm
+
+
+@BotFather
+Бот обработчик заявок с сайта
+test_chat_bot_zayavka_bot
+
+
+https://api.telegram.org/bot<token>/НАЗВАНИЕ_МЕТОДА
+
+6431106373:AAGYfMaW1q5z_ASkckqC0O8zfkDC7bEc4MQ
+
+https://api.telegram.org/bot6431106373:AAGYfMaW1q5z_ASkckqC0O8zfkDC7bEc4MQ/sendMessage?chat_id=-958733635&text=Hello
+
+
+@get_id_bot
+
+/my_id@get_id_bot
+-958733635
