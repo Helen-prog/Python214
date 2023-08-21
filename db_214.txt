@@ -302,6 +302,7 @@ python manage.py startapp cms
 python manage.py startapp price
 
 python manage.py startapp crm
+python manage.py startapp telebot
 
 
 @BotFather
@@ -320,3 +321,20 @@ https://api.telegram.org/bot6431106373:AAGYfMaW1q5z_ASkckqC0O8zfkDC7bEc4MQ/sendM
 
 /my_id@get_id_bot
 -958733635
+
+
+sendmessage.py
+
+pip install requests
+
+
+seventh
+django-admin startproject shop
+python manage.py startapp products
+
+
+change_list.html
+csv_uploder.html
+
+
+
