@@ -331,10 +331,12 @@ pip install requests
 seventh
 django-admin startproject shop
 python manage.py startapp products
+python manage.py startapp users
 
 
 change_list.html
 csv_uploder.html
 
 
+category.html
 
