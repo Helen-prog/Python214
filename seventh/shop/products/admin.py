@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import ProductCategory, Product, Photo
+from .models import ProductCategory, Product, Photo, Basket
 from django.urls import path
 from django.shortcuts import render, redirect
 from django import forms
@@ -156,3 +156,4 @@ class ProductCategoryAdmin(admin.ModelAdmin):
 admin.site.register(ProductCategory, ProductCategoryAdmin)
 admin.site.register(Product, ProductAdmin)
 admin.site.register(Photo, PhotoAdmin)
+admin.site.register(Basket)

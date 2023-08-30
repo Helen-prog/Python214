@@ -340,3 +340,13 @@ csv_uploder.html
 
 category.html
 
+basket.html
+
+
+reset_password.html
+reset_password_sent.html
+reset.html
+
+
+
+
