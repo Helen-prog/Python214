@@ -346,6 +346,8 @@ basket.html
 reset_password.html
 reset_password_sent.html
 reset.html
+reset_password_complete.html
+
 
 
 
