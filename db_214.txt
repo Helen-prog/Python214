@@ -348,7 +348,32 @@ reset_password_sent.html
 reset.html
 reset_password_complete.html
 
+eighth
+django-admin startproject shop
+python manage.py startapp products
+python manage.py startapp users
+python manage.py startapp orders
 
+category.html
 
+DROP DATABASE market_place_db;
 
+\! chcp 1251
+\l
+CREATE DATABASE market_place_db;
+\c market_place_db
+CREATE ROLE market_place with password 'store_shop';
 
+market_place - имя пользователя БД
+store_shop - пароль
+
+ALTER ROLE "market_place" WITH LOGIN;
+GRANT ALL PRIVILEGES ON DATABASE "market_place_db" to market_place;
+ALTER USER market_place CREATEDB;
+
+grant usage on schema public to public;
+grant create on schema public to public;
+
+pip install psycopg2
+
+context_processors.py
